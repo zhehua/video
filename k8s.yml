@@ -3,37 +3,17 @@ kind: Deployment
 metadata:
   name: video
 spec:
-  replicas: 1
   selector:
     matchLabels:
       app: video
+  replicas: 1
   template:
     metadata:
       labels:
         app: video
     spec:
-      terminationGracePeriodSeconds: 0
       containers:
-        - name: api
+        - name: video
           image: registry.cn-hangzhou.aliyuncs.com/uat2/spring:latest
-          imagePullPolicy: Always
           ports:
             - containerPort: 8080
-
----
-
-apiVersion: v1
-kind: Service
-metadata:
-  name: video
-  annotations:
-    dev.okteto.com/auto-ingress: "true"
-  labels:
-    app: video
-spec:
-  type: ClusterIP
-  ports:
-    - name: video
-      port: 8080
-  selector:
-    app: video
