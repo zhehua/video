@@ -15,7 +15,7 @@ spec:
       terminationGracePeriodSeconds: 0
       containers:
         - name: api
-          image: apps/video:java-maven
+          image: okteto/video:java-maven
           imagePullPolicy: Always
           ports:
             - containerPort: 8080
