@@ -15,7 +15,7 @@ spec:
       terminationGracePeriodSeconds: 0
       containers:
         - name: api
-          image: okteto/src:java-maven
+          image: registry.cn-hangzhou.aliyuncs.com/uat2/spring:latest
           imagePullPolicy: Always
           ports:
             - containerPort: 8080

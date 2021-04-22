@@ -37,9 +37,9 @@ public class TvController {
         return sb.toString();
     }
 
-    public static void main(String[] args) throws IOException {
+  /*  public static void main(String[] args) throws IOException {
         TvController controller=new TvController();
         controller.home();
-    }
+    }*/
 
 }
