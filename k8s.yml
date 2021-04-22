@@ -13,7 +13,7 @@ spec:
         app: video
     spec:
       containers:
-        - name: video
+        - name: okteto
           image: registry.cn-hangzhou.aliyuncs.com/uat2/spring:latest
           ports:
             - containerPort: 8080
