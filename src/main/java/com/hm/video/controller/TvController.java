@@ -20,20 +20,21 @@ public class TvController {
         if(body==null)
             return null;
         Elements es = body.getElementsByClass("myui-content__list scrollbar sort-list clearfix");
+        StringBuilder sb=new StringBuilder();
         for (Element e : es) {
             Element li = e.selectFirst("li");
             Element a = li.selectFirst("a");
             String href = domain+a.attr("href");
-            System.out.println(a.html()+"\n"+href);
+            sb.append(a.html()+"\n"+href+"\n\n");
             Element playBody = JsoupUtil.getBody(href);
             //class=""
             Elements clearfix = playBody.select(".myui-player__box>.clearfix");
             Element script = clearfix.select("script").first();
             String s = script.html().split("=")[1];
             JSONObject jsonObject= JSONObject.parseObject(s);
-            System.out.println(jsonObject.getString("url"));
+            sb.append(jsonObject.getString("url")+"\n\n");
         }
-        return body.text();
+        return sb.toString();
     }
 
     public static void main(String[] args) throws IOException {
