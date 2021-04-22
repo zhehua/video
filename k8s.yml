@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
         - name: okteto
-          image: registry.cn-hangzhou.aliyuncs.com/uat2/spring:latest
+          image: video:latest
           ports:
             - containerPort: 8080
