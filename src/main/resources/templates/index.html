@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>爱回家播放页面</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+    <div class="jumbotron text-center">
+        <h1 th:text="${'爱回家第'+videoDTO.name+'集'}"></h1>
+    </div>
+    <div class="row">
+        <img th:src="${videoDTO.imgUrl}" width="50%" class="center-block"/>
+    </div>
+    <div class="row text-center" style="margin-top:15px">
+
+        <a th:href="${videoDTO.pageUrl}">详情页</a>
+        <a th:href="${'https://www.mgtv.com.byteamone.cn/?url='+videoDTO.playUrl}">电脑播放</a>
+        <a th:href="${videoDTO.playUrl}">手机播放</a>
+
+    </div>
+</div>
+</body>
+</html>
