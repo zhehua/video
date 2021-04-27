@@ -41,36 +41,35 @@
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
 			<!-- Jib插件 -->
-			<!-- 
-			<plugin>
+			<!--<plugin>
 				<groupId>com.google.cloud.tools</groupId>
 				<artifactId>jib-maven-plugin</artifactId>
 				<version>3.0.0</version>
-				<!-- <groupId>com.google.cloud.tools</groupId>
+				&lt;!&ndash; <groupId>com.google.cloud.tools</groupId>
                  <artifactId>jib-maven-plugin</artifactId>
-                 <version>1.7.0</version>-->
+                 <version>1.7.0</version>&ndash;&gt;
 				<configuration>
-					<!-- 拉取所需的基础镜像 - 这里用于运行springboot项目 -->
+					&lt;!&ndash; 拉取所需的基础镜像 - 这里用于运行springboot项目 &ndash;&gt;
 					<from>
 						<image>openjdk:alpine</image>
 					</from>
-					<!-- 最后生成的镜像配置 -->
+					&lt;!&ndash; 最后生成的镜像配置 &ndash;&gt;
 					<to>
-						<!-- push到阿里云镜像仓库，如果是其它镜像仓库，将下面地址替换掉即可，ex: `Docker Hub` 的 `docker.io/zhengqing/xxx` -->
+						&lt;!&ndash; push到阿里云镜像仓库，如果是其它镜像仓库，将下面地址替换掉即可，ex: `Docker Hub` 的 `docker.io/zhengqing/xxx` &ndash;&gt;
 						<image>registry.cn-hangzhou.aliyuncs.com/uat2/spring</image>
-						<!-- 镜像版本号 -->
-						<!--<tags>-->
-						<!--<tag>v1</tag>-->
-						<!--</tags>-->
+						&lt;!&ndash; 镜像版本号 &ndash;&gt;
+						&lt;!&ndash;<tags>&ndash;&gt;
+						&lt;!&ndash;<tag>v1</tag>&ndash;&gt;
+						&lt;!&ndash;</tags>&ndash;&gt;
 						<auth>
-							<!--在阿里云上的账号和密码-->
+							&lt;!&ndash;在阿里云上的账号和密码&ndash;&gt;
 							<username>xx</username>
 							<password>xx</password>
 						</auth>
 					</to>
 					<container>
 						<ports>
-							<!--指定镜像端口 , 这里没用 docfile的操作-->
+							&lt;!&ndash;指定镜像端口 , 这里没用 docfile的操作&ndash;&gt;
 							<port>8080</port>
 						</ports>
 					</container>
@@ -83,8 +82,7 @@
 						</goals>
 					</execution>
 				</executions>
-			</plugin>
-		 -->
+			</plugin>-->
 		</plugins>
 	</build>
 
