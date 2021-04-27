@@ -13,7 +13,7 @@ import java.io.IOException;
 @RestController
 public class TvController {
     private final String domain="https://www.hktvyb.com/";
-    @GetMapping("/home")
+    @GetMapping("/")
     public String home() {
         String url=domain+"vod/detail/id/947.html";
         Element body = JsoupUtil.getBody(url);
